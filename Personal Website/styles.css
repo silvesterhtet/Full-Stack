@@ -1,0 +1,406 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Landing Page Styling */
+.landing-page {
+    height: 100vh; /* Full height of the viewport */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000; /* Dark background */
+    color: #fff;
+}
+
+.name-container {
+    text-align: center;
+}
+
+.name-container h1 {
+    font-size: 10vw; /* Large, responsive font size */
+    font-weight: bold;
+    letter-spacing: 2px;
+    white-space: nowrap; /* Keeps the name on a single line */
+    overflow: hidden; /* Hides the text until it's typed */
+    border-right: 3px solid #fff; /* Simulates cursor */
+    animation: typing 1.5s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Keyframes for blinking cursor */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Future content styling */
+.about-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Arrange content from top to bottom */
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+    gap: 2rem; /* Add gap between the elements */
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin: 0; /* Remove bottom margin */
+}
+
+.about-section p {
+    font-size: 1.5em;
+    margin: 0; /* Remove top margin */
+}
+
+/* Pill box styling */
+.pill-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none; /* Remove underline from link */
+    margin-top: 20px; /* Add margin to separate it from the content */
+    gap: 10px;
+}
+
+.pill-box:hover {
+    background-color: #555; /* Change background color on hover */
+}
+
+.pill-box .close-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .name {
+    color: hsl(0, 0%, 76%);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap; /* Keeps the name on a single line */
+    overflow: hidden;
+    display: flex;
+}
+
+.navbar .name a {
+    color: hsl(0, 0%, 76%); /* Ensure the text is white */
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 1rem;
+}
+
+.navbar ul li a {
+    color: hsl(0, 0%, 76%);
+    text-decoration: none;
+    font-size: 1rem;
+    white-space: nowrap; /* Keeps the name on a single line */
+    overflow: hidden;
+}
+
+.navbar ul li a:hover {
+    color: white; /* Change color on hover */
+}
+
+.navbar .name a:hover {
+    color: white; /* Change color on hover */
+}
+
+/* Future content styling */
+.projects-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Arrange content from top to bottom */
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 50px;
+    gap: 2rem; /* Add gap between the elements */
+}
+
+.projects-section h2 {
+    font-size: 2.5em;
+    margin: 0; /* Remove bottom margin */
+}
+
+.projects-section p {
+    font-size: 1.5em;
+    margin: 0; /* Remove top margin */
+}
+
+/* Contact section styling */
+.contact-section {
+    display: flex;
+    flex-direction: column; /* Arrange content from top to bottom */
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 100px;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-section ul li {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-section ul li img.email-icon {
+    width: 32px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.contact-section ul li img.phone-icon {
+    width: 32px; /* Adjust size as needed */
+    height: 32px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.contact-section ul li a {
+    color: #0015ff; /* Tomato color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-section ul li a:hover {
+    color: #000643; /* Darker tomato color */
+}
+
+.contact-section .social-links {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.contact-section .social-links a {
+    display: inline-block;
+    width: 48px; /* Increased size */
+    height: 48px; /* Increased size */
+}
+
+.contact-section .social-links img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.contact-section .social-links img:hover {
+    transform: scale(1.1);
+}
+
+.bio-landing-page {
+    height: 100vh; /* Full height of the viewport */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('HelloThere.png'); /* Background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the */
+    color: #fff;
+    text-align: center
+}
+
+.bio-landing-page h1 {
+    font-size: 10vw; /* Large, responsive font size */
+    font-weight: bold;
+    letter-spacing: 2px;
+    white-space: nowrap; /* Keeps the text on a single line */
+    overflow: hidden; /* Hides the text until it's typed */
+}
+
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hobbies-section {
+    background-color: #e9e9e9;
+    color: #333;
+}
+
+.bio-section, .experience-section, .ambitions-section {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.bio-section h2, .hobbies-section h2, .experience-section h2, .ambitions-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+}
+
+.bio-section p, .hobbies-section p, .experience-section p, .ambitions-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.bio-photo, .hobbies-photo, .experience-photo, .ambitions-photo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2rem; /* Add margin to separate it from the content */
+}
+
+.bio-section {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    padding: 2rem; /* Add some padding */
+}
+
+.bio-photo {
+    flex: 1; /* Allow the image to take up one part of the available space */
+    max-width: 50%; /* Ensure the image doesn't take more than half the width */
+    margin-right: 2vw; /* Add some space between the image and text */
+    border-radius: 2vw;
+}
+
+.bio-text {
+    flex: 2; /* Allow the text to take up two parts of the available space */
+    font-size: 2vw;
+    line-height: 1.6;
+}
+
+/* Carousel styling */
+.list-wrapper {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden; /* Hide overflow to show only part of the next/previous items */
+}
+
+.list {
+    display: flex;
+    gap: 1vw;
+    padding: 2vw;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    overflow: hidden;
+    scroll-padding-left: 50vw;
+}
+
+.item {
+    flex: 0 0 auto; /* Prevent items from shrinking or growing */
+    width: 45vw; /* Fixed width */
+    height: 45vw; /* Fixed height */
+    margin: 0 1vw; /* Add margin to separate items */
+    border-radius: 4vw; /* Rounded edges */
+    overflow: hidden; /* Ensure content fits within the rounded corners */
+    scroll-snap-align: center; /* Center the active item */
+    position: relative; /* Position relative to contain the caption */
+}
+
+.content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire item */
+    border-radius: 2vw; /* Rounded edges */
+}
+
+.caption {
+    position: absolute;
+    top: 2vw; /* Position at the top */
+    left: 2vw; /* Position to the left */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 0.5vw;
+    border-radius: 1.2vw; /* Rounded edges for the caption */
+    font-size: 2vw;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.item:hover .caption {
+    opacity: 1; /* Show caption on hover */
+}
+
+  .button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  .button--previous {
+     transform: rotateY(180deg);
+    left: 10px;
+  }
+  
+  .button--next {
+    right: 10px;
+
+  }
+
+  /* Footer styling */
+  .footer {
+    padding: 1rem 2rem; /* Adjust padding to move text further in */
+    background-color: #333;
+    color: #f4f4f4;
+    width: 100%;
+    bottom: 0;
+}

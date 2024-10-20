@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="slogo.png" type="image/x-icon"> <!-- Added favicon link -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="name"><a href="index.html">&lt;/&gt;Silvester Htet</a></div>
+        <ul>
+            <li><a href="index.html#about-section">About</a></li>
+            <li><a href="index.html#projects-section">Projects</a></li>
+            <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="bio.html">Bio</a></li>
+            <li><a href="index.html#contact-section">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Landing Section -->
+    <section class="bio-landing-page">
+        <h1>Hello There</h1>
+    </section>
+
+    <!-- Biography Section -->
+    <section class="bio-section">
+        <div class="bio-text">
+            <h2>About Me</h2>
+            <p>Your bio text goes here. This is where you can write about yourself.</p>
+        </div>
+        <img src="PCBuilding.jpg" alt="Bio Photo" class="bio-photo">
+    </section>
+
+    <!-- Hobbies Section -->
+    <section class="hobbies-section">
+        <h2>Hobbies Hobbies Hobbies</h2>
+        <div class="list-wrapper">
+            <ul class="list">
+                <li class="item">
+                    <div class="content">
+                        <img src="golf.JPEG" alt="Golf">
+                        <div class="caption">Guess my handicap</div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="content">
+                        <img src="dance.JPEG" alt="Dance">
+                        <div class="caption">Dancing is fun</div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="content">
+                        <img src="soccer.JPEG" alt="Soccer">
+                        <div class="caption">I still call it football</div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="content">
+                        <img src="camping.JPEG" alt="Camping">
+                        <div class="caption">Moments before pouring rain</div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="content">
+                        <img src="bowling.JPEG" alt="Bowling">
+                        <div class="caption">Totally got a strike after</div>
+                    </div>
+                </li>
+            </ul>
+            <!-- We're calling `handleClick` with a direction argument when the buttons are clicked -->
+            <button onclick="handleClick('previous')" class="button button--previous" type="button">➜</button>
+            <button onclick="handleClick('next')" class="button button--next" type="button">➜</button>
+          </div>
+          <script>
+            const list = document.querySelector(".list");
+          
+            // We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.
+            const item = document.querySelector(".item");
+            const itemWidth = item.offsetWidth;
+          
+            function handleClick(direction) {
+              // Based on the direction we call `scrollBy` with the item width we got earlier
+              if(direction === "previous") {
+                list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+              } else {
+                list.scrollBy({ left: itemWidth, behavior: "smooth" });
+              }
+            }
+          </script>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section class="experience-section">
+        <h2>Professional Experience</h2>
+        <p>I have worked on various projects and internships that have helped me develop my skills in software engineering and problem-solving.</p>
+    </section>
+
+    <!-- Ambitions Section -->
+    <section class="ambitions-section">
+        <h2>Everything ... is still ahead.</h2>
+        <p>My ambition is to become a leading software engineer who can make a significant impact in the tech industry. I aim to work on innovative projects that can change the world.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Copyright &copy; 2024 Silvester Htet. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
