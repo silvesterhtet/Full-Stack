@@ -12,13 +12,18 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="name"><a href="index.html">&lt;/&gt;Silvester Htet</a></div>
-        <ul>
+        <ul class="nav-links">
             <li><a href="index.html#about-section">About</a></li>
             <li><a href="index.html#projects-section">Projects</a></li>
             <li><a href="resume.pdf" target="_blank">Resume</a></li>
             <li><a href="bio.html">Bio</a></li>
             <li><a href="index.html#contact-section">Contact</a></li>
         </ul>
+        <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
     </nav>
 
     <!-- Landing Section -->
@@ -75,22 +80,6 @@
             <button onclick="handleClick('previous')" class="button button--previous" type="button">➜</button>
             <button onclick="handleClick('next')" class="button button--next" type="button">➜</button>
           </div>
-          <script>
-            const list = document.querySelector(".list");
-          
-            // We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.
-            const item = document.querySelector(".item");
-            const itemWidth = item.offsetWidth;
-          
-            function handleClick(direction) {
-              // Based on the direction we call `scrollBy` with the item width we got earlier
-              if(direction === "previous") {
-                list.scrollBy({ left: -itemWidth, behavior: "smooth" });
-              } else {
-                list.scrollBy({ left: itemWidth, behavior: "smooth" });
-              }
-            }
-          </script>
     </section>
 
     <!-- Professional Experience Section -->

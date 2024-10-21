@@ -104,12 +104,13 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Navbar styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
-    padding: 1rem;
+    padding: 1vw;
     position: fixed;
     width: 100%;
     top: 0;
@@ -120,15 +121,14 @@ html {
 .navbar .name {
     color: hsl(0, 0%, 76%);
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: bold;
-    white-space: nowrap; /* Keeps the name on a single line */
+    white-space: nowrap;
     overflow: hidden;
-    display: flex;
 }
 
 .navbar .name a {
-    color: hsl(0, 0%, 76%); /* Ensure the text is white */
+    color: hsl(0, 0%, 76%);
     text-decoration: none;
 }
 
@@ -140,23 +140,77 @@ html {
 }
 
 .navbar ul li {
-    margin-left: 1rem;
+    margin-left: 2vw;
 }
 
 .navbar ul li a {
     color: hsl(0, 0%, 76%);
     text-decoration: none;
-    font-size: 1rem;
-    white-space: nowrap; /* Keeps the name on a single line */
+    font-size: 20px;
+    white-space: nowrap;
     overflow: hidden;
 }
 
 .navbar ul li a:hover {
-    color: white; /* Change color on hover */
+    color: white;
 }
 
 .navbar .name a:hover {
-    color: white; /* Change color on hover */
+    color: white;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active .bar {
+    background-color: #555; /* Change color when active */
+}
+
+.nav-links {
+    display: none;
+}
+
+/* Media query for collapsing navbar */
+@media (max-aspect-ratio: 3/2) {
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar ul {
+        display: none; /* Hide nav links by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        right: 0; /* Align to the right */
+        align-items: center;
+        padding: 1vw 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .navbar ul li {
+        margin: 1vw 0;
+    }
+
+    .navbar ul li a {
+        font-size: 18px; /* Slightly smaller font size for mobile */
+    }
 }
 
 /* Future content styling */

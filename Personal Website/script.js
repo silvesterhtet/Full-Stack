@@ -21,3 +21,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     type(); // Start typing effect
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active'); // Toggle active class on hamburger
+    });
+});
