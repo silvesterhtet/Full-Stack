@@ -13,11 +13,7 @@
     <nav class="navbar">
         <div class="name"><a href="index.html">&lt;/&gt;Silvester Htet</a></div>
         <ul class="nav-links">
-            <li><a href="index.html#about-section">About</a></li>
-            <li><a href="index.html#projects-section">Projects</a></li>
-            <li><a href="resume.pdf" target="_blank">Resume</a></li>
-            <li><a href="bio.html">Bio</a></li>
-            <li><a href="index.html#contact-section">Contact</a></li>
+            <li><a href="index.html">Return to Main Page</a></li>
         </ul>
         <div class="hamburger">
         <div class="bar"></div>
@@ -35,9 +31,21 @@
     <section class="bio-section">
         <div class="bio-text">
             <h2>About Me</h2>
-            <p>Your bio text goes here. This is where you can write about yourself.</p>
+            <p>Computers and technology have been my passion ever sicne I had access to my dad's old laptop.
+                I loved that I was able to play games, watch videos and learn about anything I wanted.
+                <br><br> My introduction to programming came when in the fifth grade, when my Computer Literacty class
+                introduced me to Scratch. I was fascinated by the idea that I could create my own games and animations.
+                I remember spending countless hours making games, testing them, and sharing them with my friends.
+                <br><br> I have come a long way since then, and I am now a Computer Science student at UC Berkeley
+                learning how to develop apps, design an OS and hack into vulnerable systems. I am drawn by the challenges and
+                opporunities that come with the field and hope to keep doing what I love.
+
+            </p>
         </div>
-        <img src="PCBuilding.jpg" alt="Bio Photo" class="bio-photo">
+        <div class="bio-photo-container">
+            <img src="PCBuilding.jpg" alt="Bio Photo" class="bio-photo">
+            <div class="caption">Building my first PC when I was 12</div>
+        </div>
     </section>
 
     <!-- Hobbies Section -->
@@ -79,19 +87,41 @@
             <!-- We're calling `handleClick` with a direction argument when the buttons are clicked -->
             <button onclick="handleClick('previous')" class="button button--previous" type="button">➜</button>
             <button onclick="handleClick('next')" class="button button--next" type="button">➜</button>
+            <script>
+                const list = document.querySelector(".list");
+              
+                // We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.
+                const item = document.querySelector(".item");
+                const itemWidth = item.offsetWidth;
+              
+                function handleClick(direction) {
+                  // Based on the direction we call `scrollBy` with the item width we got earlier
+                  if(direction === "previous") {
+                    list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+                  } else {
+                    list.scrollBy({ left: itemWidth, behavior: "smooth" });
+                  }
+                }
+              </script>
           </div>
     </section>
 
     <!-- Professional Experience Section -->
     <section class="experience-section">
         <h2>Professional Experience</h2>
-        <p>I have worked on various projects and internships that have helped me develop my skills in software engineering and problem-solving.</p>
+        <p>Originally entering Berkeley as a Civil Engineer, my love of programming resurfaced when I had to take a few coding classes
+            From then on, I started taking more classes and then eventually decided to also major in Computer Science.
+            This would be my first recruitment cycle in the tech industry, but I have been preparing for years to perfect my coding skills.
+
+        </p>
     </section>
 
     <!-- Ambitions Section -->
     <section class="ambitions-section">
         <h2>Everything ... is still ahead.</h2>
-        <p>My ambition is to become a leading software engineer who can make a significant impact in the tech industry. I aim to work on innovative projects that can change the world.</p>
+        <p>Despite all the classes I have taken an the projects I did, my journey in the tech industry has only beugn.
+            I cannot wait to see myself in five years when I am developing softwares that can reach millions of people.
+        </p>
     </section>
 
     <!-- Footer -->

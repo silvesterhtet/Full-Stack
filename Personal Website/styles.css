@@ -186,6 +186,7 @@ html {
 @media (max-aspect-ratio: 3/2) {
     .hamburger {
         display: flex;
+        padding: 1lvh;
     }
 
     .navbar ul {
@@ -197,7 +198,6 @@ html {
         top: 100%;
         right: 0; /* Align to the right */
         align-items: center;
-        padding: 1vw 0;
     }
 
     .nav-links.active {
@@ -364,19 +364,20 @@ section {
 }
 
 .bio-section h2, .hobbies-section h2, .experience-section h2, .ambitions-section h2 {
-    font-size: 2.5em;
+    font-size: 3vh;
     margin-bottom: 1rem;
 }
 
 .bio-section p, .hobbies-section p, .experience-section p, .ambitions-section p {
-    font-size: 1.2em;
+    font-size: 1.8vh;
     line-height: 1.6;
 }
 
 .bio-photo, .hobbies-photo, .experience-photo, .ambitions-photo {
     max-width: 100%;
     height: auto;
-    margin-bottom: 2rem; /* Add margin to separate it from the content */
+    margin-bottom: 2vw; /* Add margin to separate it from the content */
+    padding-left: 2vw;
 }
 
 .bio-section {
@@ -385,11 +386,32 @@ section {
     padding: 2rem; /* Add some padding */
 }
 
+.bio-photo-container {
+    position: relative;
+    display: inline-block;
+}
+
 .bio-photo {
-    flex: 1; /* Allow the image to take up one part of the available space */
-    max-width: 50%; /* Ensure the image doesn't take more than half the width */
-    margin-right: 2vw; /* Add some space between the image and text */
-    border-radius: 2vw;
+    display: block;
+    width: 40vw;
+    height: auto;
+}
+
+.caption {
+    position: absolute;
+    top: 2vw; /* Position at the top */
+    left: 2vw; /* Position to the left */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 0.5vw;
+    border-radius: 1.2vw; /* Rounded edges for the caption */
+    font-size: 2vw;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.bio-photo-container:hover .caption {
+    opacity: 1;
 }
 
 .bio-text {
@@ -407,8 +429,8 @@ section {
 
 .list {
     display: flex;
-    gap: 1vw;
-    padding: 2vw;
+    gap: 1vh;
+    padding: 2vh;
     list-style: none;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -418,8 +440,8 @@ section {
 
 .item {
     flex: 0 0 auto; /* Prevent items from shrinking or growing */
-    width: 45vw; /* Fixed width */
-    height: 45vw; /* Fixed height */
+    width: 45vh; /* Fixed width */
+    height: 45vh; /* Fixed height */
     margin: 0 1vw; /* Add margin to separate items */
     border-radius: 4vw; /* Rounded edges */
     overflow: hidden; /* Ensure content fits within the rounded corners */
@@ -436,13 +458,13 @@ section {
 
 .caption {
     position: absolute;
-    top: 2vw; /* Position at the top */
-    left: 2vw; /* Position to the left */
+    top: 2vh; /* Position at the top */
+    left: 2vh; /* Position to the left */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     color: white;
     padding: 0.5vw;
     border-radius: 1.2vw; /* Rounded edges for the caption */
-    font-size: 2vw;
+    font-size: 2vh;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s; /* Smooth transition */
 }
