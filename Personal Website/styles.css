@@ -62,17 +62,17 @@ body {
     background-color: #f4f4f4;
     color: #333;
     text-align: center;
-    padding: 50px;
+    padding: 10vh;;
     gap: 2rem; /* Add gap between the elements */
 }
 
 .about-section h2 {
-    font-size: 2.5em;
+    font-size: 6vh;
     margin: 0; /* Remove bottom margin */
 }
 
 .about-section p {
-    font-size: 1.5em;
+    font-size: 3vh;
     margin: 0; /* Remove top margin */
 }
 
@@ -215,28 +215,50 @@ html {
 
 /* Future content styling */
 .projects-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column; /* Arrange content from top to bottom */
-    justify-content: center;
-    align-items: center;
+    padding: 5vw;
     background-color: black;
     color: #f4f4f4;
     text-align: center;
-    padding: 50px;
-    gap: 2rem; /* Add gap between the elements */
 }
 
 .projects-section h2 {
-    font-size: 2.5em;
-    margin: 0; /* Remove bottom margin */
+    font-size: 5vh; /* Increase the font size */
+    margin-bottom: 3vh; /* Add some margin below the heading */
 }
 
-.projects-section p {
-    font-size: 1.5em;
-    margin: 0; /* Remove top margin */
+.project {
+    margin-bottom: 6vw;
 }
 
+
+.project h3 {
+    font-size: 3vh;
+    margin-bottom: 1vw;
+}
+
+.project p {
+    font-size: 2vw;
+    margin-top: 1vw;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-bottom: 2vw;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 /* Contact section styling */
 .contact-section {
     display: flex;
