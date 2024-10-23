@@ -54,7 +54,7 @@ body {
 
 /* Future content styling */
 .about-section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column; /* Arrange content from top to bottom */
     justify-content: center;
@@ -270,27 +270,28 @@ html {
 
 .contact-section h2 {
     font-size: 2.5em;
-    margin: 1rem 0;
+    margin: 1vh 0;
     display: flex;
-    align-items: center;
+    text-align: left;
 }
 
 .contact-section ul li {
-    margin: 1rem 0;
+    margin: 1vh 0;
     display: flex;
-    align-items: center;
+    align-items: left;
+    text-align: left;
 }
 
 .contact-section ul li img.email-icon {
-    width: 32px; /* Adjust size as needed */
-    height: 24px; /* Adjust size as needed */
-    margin-right: 10px;
+    width: auto; /* Adjust size as needed */
+    height: 2vh; /* Adjust size as needed */
+    margin-right: 1vh;
 }
 
 .contact-section ul li img.phone-icon {
-    width: 32px; /* Adjust size as needed */
-    height: 32px; /* Adjust size as needed */
-    margin-right: 10px;
+    width: auto; /* Adjust size as needed */
+    height: 2vh; /* Adjust size as needed */
+    margin-right: 1vh;
 }
 
 .contact-section ul li a {
@@ -305,14 +306,14 @@ html {
 
 .contact-section .social-links {
     display: flex;
-    gap: 1rem;
-    padding-top: 1rem;
+    gap: 1vh;
+    padding-top: 1vh;
 }
 
 .contact-section .social-links a {
     display: inline-block;
-    width: 48px; /* Increased size */
-    height: 48px; /* Increased size */
+    width: 4vh; /* Increased size */
+    height: auto; /* Increased size */
 }
 
 .contact-section .social-links img {
@@ -358,7 +359,7 @@ section {
     color: #333;
 }
 
-.bio-section, .experience-section, .ambitions-section {
+.experience-section, .ambitions-section {
     background-color: #f4f4f4;
     color: #333;
 }
@@ -368,33 +369,71 @@ section {
     margin-bottom: 1rem;
 }
 
-.bio-section p, .hobbies-section p, .experience-section p, .ambitions-section p {
+.bio-section p {
+    font-size: 2vh;
+    line-height: 1.6;
+    padding-right: 2vh;
+}
+
+.hobbies-section p, .experience-section p, .ambitions-section p {
     font-size: 1.8vh;
     line-height: 1.6;
 }
 
-.bio-photo, .hobbies-photo, .experience-photo, .ambitions-photo {
+.hobbies-photo, .experience-photo, .ambitions-photo {
     max-width: 100%;
     height: auto;
     margin-bottom: 2vw; /* Add margin to separate it from the content */
-    padding-left: 2vw;
+    border-radius: 2vw;
 }
 
 .bio-section {
+    min-height: 100vh; /* Minimum height of 100vh */
     display: flex;
-    align-items: center; /* Align items vertically centered */
-    padding: 2rem; /* Add some padding */
+    flex-direction: row; /* Default layout: side by side */
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 8vw;
+    gap: 2vw; /* Add gap between the elements */
 }
 
 .bio-photo-container {
+    flex: 1; /* Allow the photo to take up one part of the available space */
     position: relative;
     display: inline-block;
 }
 
 .bio-photo {
     display: block;
-    width: 40vw;
+    height: 80vh;
     height: auto;
+    margin-bottom: 2vw; /* Add margin to separate it from the content */
+    border-radius: 2vw;
+}
+
+.bio-text {
+    font-size: 2vw;
+    line-height: 1.6;
+}
+
+.bio-photo-container:hover .caption {
+    opacity: 1;
+}
+
+
+/* Media query for large vertical-to-horizontal ratio */
+@media (max-aspect-ratio: 1/1) {
+    .bio-section {
+        flex-direction: column; /* Stack elements vertically */
+    }
+    
+    .bio-photo-container {
+        order: -1; /* Move the photo container to the top */
+    }
+
 }
 
 .caption {
@@ -406,12 +445,6 @@ section {
     padding: 0.5vw;
     border-radius: 1.2vw; /* Rounded edges for the caption */
     font-size: 2vw;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s; /* Smooth transition */
-}
-
-.bio-photo-container:hover .caption {
-    opacity: 1;
 }
 
 .bio-text {
