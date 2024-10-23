@@ -265,7 +265,7 @@ html {
     flex-direction: column; /* Arrange content from top to bottom */
     background-color: #f4f4f4;
     color: #333;
-    padding: 100px;
+    padding: 5vh;
 }
 
 .contact-section h2 {
@@ -276,7 +276,7 @@ html {
 }
 
 .contact-section ul li {
-    margin: 1vh 0;
+    margin: 1vw 0;
     display: flex;
     align-items: left;
     text-align: left;
@@ -284,14 +284,14 @@ html {
 
 .contact-section ul li img.email-icon {
     width: auto; /* Adjust size as needed */
-    height: 2vh; /* Adjust size as needed */
-    margin-right: 1vh;
+    height: 3vw; /* Adjust size as needed */
+    margin-right: 1vw;
 }
 
 .contact-section ul li img.phone-icon {
     width: auto; /* Adjust size as needed */
-    height: 2vh; /* Adjust size as needed */
-    margin-right: 1vh;
+    height: 3vw; /* Adjust size as needed */
+    margin-right: 1vw;
 }
 
 .contact-section ul li a {
@@ -306,13 +306,13 @@ html {
 
 .contact-section .social-links {
     display: flex;
-    gap: 1vh;
-    padding-top: 1vh;
+    gap: 1vw;
+    padding-top: 1vw;
 }
 
 .contact-section .social-links a {
     display: inline-block;
-    width: 4vh; /* Increased size */
+    width: 7vw; /* Increased size */
     height: auto; /* Increased size */
 }
 
@@ -408,6 +408,7 @@ section {
 
 .bio-photo {
     display: block;
+    max-width: 40vw;;
     height: 80vh;
     height: auto;
     margin-bottom: 2vw; /* Add margin to separate it from the content */
