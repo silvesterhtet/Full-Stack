@@ -409,6 +409,7 @@ section {
 .bio-photo {
     display: block;
     height: 80vh;
+    max-width: 80vw;
     height: auto;
     margin-bottom: 2vw; /* Add margin to separate it from the content */
     border-radius: 2vw;
@@ -512,18 +513,18 @@ section {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 1vw;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.5vh;
   }
   
   .button--previous {
      transform: rotateY(180deg);
-    left: 10px;
+    left: 1vw;
   }
   
   .button--next {
-    right: 10px;
+    right: 1vw;
 
   }
 
