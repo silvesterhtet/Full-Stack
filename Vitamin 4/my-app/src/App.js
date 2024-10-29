@@ -1,29 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home/Home';
+import NotHome from './pages/NotHome/NotHome';
 import './App.css';
-import Navbar from './components/Navbar/Navbar'; // Import the Navbar component
-import Home from './pages/Home/Home'; // Import the Home component
-import NotHome from './pages/NotHome/NotHome'; // Import the NotHome component
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; // Import Router, Route, and Switch to manage routes
 
+const MyWebsite = () => <h2>My Website Yay!</h2>
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer  "
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route exact path="/" element={<MyWebsite />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/nothome" element={<NotHome />} />
+      </Routes>
     </div>
   );
 }
