@@ -57,7 +57,43 @@
     <!-- Projects Section -->
     <section class="projects-section" id="projects-section">
         <h2>Projects</h2>
-        
+
+        <div class="project">
+            <h3>Pintos Education OS</h3>
+            <p>Using C and x86 assembly, I implemented various functionality into the Pintos OS originally developed by Stanford. For User Programs, the OS now supports command-line arguments, process control syscalls,
+                 file operation syscalls, and floating point operations. I also implemented threads for User Programs that have the same functionality as kernel threads, including thread creation, waiting,
+                 and exiting. A priority scheduler featuring priority donation was also implemented to enable preemptive scheduling of threads.
+            </p>
+
+        <div class="project">
+            <h3>Secure File Sharing Server</h3>
+            <p>Created a secure file storage and sharing server using Google's UUID and DataStore packages in GO.
+                The server allows users to create accounts, upload files, and share files with other users. All updates to files are updated instantly for all users with access to the file. The server also supports file versioning and file encryption. 
+                Public and private RSA keys are used for encrypting, decrypting, signing and verifying files during file shares. Files are securely stored in the server 
+                using an encrypt then MAC scheme which prevents tampering without evidence. Revoking users is also allowed after sharing so that revoked users will no longer be able to access files shared with them or learn 
+                about any updates to the files.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Pokernow.com GTO Chrome Plugin</h3>
+            <p>Developed a Chromium Overlay Extension for pokernow.com using Python, JavaScript, CSS and HTML. Goal is to help players determine game theory optimality of plays.
+                Using a standard PreFlop chart and blind sizes, the extension calculates the optimal first action based on the player's hand and position. Realistically, postflop play is too expensive and complex to calculate in real time even with the best of computers, so the extension only calculates the optimal first action.
+                To make up for the lack of GTO postflop calulations, the extension also keeps tracks of shown hands by opponents and dynamically updates the player's hand range. This allows the player to make more informed decisions based on the hands that have been shown.
+                The extension also displays the chances of getting certain hands (straight, flush, etc...) as well as expected values (EV) based on draws and the pot size. 
+            </p> 
+        </div>
+
+        <div class="project">
+            <h3>Coinbase Trading Bot</h3>
+            <p>
+                Created an automated trading bot using Coinbase's API and Python. This bot exclusively trades low market cap coins since I do not have the computational power to compete
+                with market makers and other high frequency traders. The bot uses a simple moving average (SMA) strategy to determine when to buy and sell. This means that the detection of a large buy order
+                of a correlated coin will trigger a buy order of other coins in the same market. The bot also uses a stop loss to prevent large losses in case of a market crash. The bot is currently running on my home PC
+                 and has made decent profits since it was deployed.
+            </p> 
+        </div>
+
         <div class="project">
             <h3>Suspicious Explorer</h3>
             <div class="video-container">
@@ -65,20 +101,6 @@
             </div>
             <p>A procedurally generated sperlunking game featuring a suspicious protaganist. Collect coins to get to the next level!</p>
         </div>
-
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Coming Soon</p>
-        </div>
-
-        <div class="project">
-            <h3>Project 3</h3>
-            <p>Coming Soon</p>
-        </div>
-
-        <div class="project">
-            <h3>Project 4</h3>
-            <p>Coming Soon</p>
         </div>
     </section>
 
