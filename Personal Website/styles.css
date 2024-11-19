@@ -237,8 +237,9 @@ html {
 }
 
 .project p {
-    font-size: 2vw;
-    margin-top: 1vw;
+    font-size: 2vh;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
 }
 
 .video-container {
